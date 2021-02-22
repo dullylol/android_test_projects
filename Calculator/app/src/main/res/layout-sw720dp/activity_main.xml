@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/cyberblack">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp">
+
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:text=""
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="60sp" />
+
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:text=""
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/equal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="="
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="60sp" />
+    </LinearLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        app:columnCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.03"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="+"
+            android:textSize="40sp"
+            app:layout_gravity="fill_vertical"
+            app:layout_rowSpan="2"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="-"
+            android:textSize="40sp" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="/"
+            android:textSize="40sp"
+            app:layout_columnSpan="1"
+            app:layout_gravity="fill_horizontal"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="*"
+            android:textSize="40sp"
+            app:layout_columnSpan="2"
+            app:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:id="@+id/buttonPow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="^"
+            android:textSize="40sp"
+            app:layout_gravity="fill_horizontal"
+            android:layout_marginRight="20dp" />
+
+        <Button
+            android:id="@+id/buttonClean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButton"
+            android:text="C"
+            android:textSize="40sp"
+            app:layout_columnSpan="2"
+            app:layout_gravity="fill_horizontal"/>
+    </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/imageSamurai"
+        android:layout_width="825dp"
+        android:layout_height="1202dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.453"
+        android:background="@drawable/samurai" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

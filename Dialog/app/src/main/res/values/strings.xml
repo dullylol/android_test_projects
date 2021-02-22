@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Dialog</string>
+    <string name="close_app_text">Закрыть прирожение</string>
+    <string name="choose_ingredients">Выбрать ингридиенты</string>
+</resources>
