@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TestViewBinding</string>
+    <string name="default_textview_text">You did not click anything!</string>
+</resources>
